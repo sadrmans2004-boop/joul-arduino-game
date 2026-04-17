@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Joul Engineering Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>???? ???????? ??? - 10 ????</h1>
+        <div id="task-status">??????: <span id="current-task-num">1</span></div>
+    </header>
+    <main class="game-container">
+        <aside class="sidebar">
+            <h3>???????</h3>
+            <div class="component" draggable="true" id="arduino-uno">Arduino Uno</div>
+            <div class="component" draggable="true" id="led-red">Red LED</div>
+            <div class="component" draggable="true" id="resistor">Resistor</div>
+        </aside>
+        <section class="canvas-area" id="canvas">
+            <div class="instruction-overlay">????? ??????? ??? ???????</div>
+        </section>
+        <aside class="code-area">
+            <h3>???? ?????</h3>
+            <textarea id="code-editor" placeholder="????? ????? ???..."></textarea>
+            <button id="run-btn">???? ?? ????</button>
+            <div id="feedback"></div>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

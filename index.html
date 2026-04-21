@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Joul Engineering Academy</title>
+    <title>Joul Engineering Academy - Task Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>???? ???????? ??? - 10 ????</h1>
-        <div id="task-status">??????: <span id="current-task-num">1</span></div>
-    </header>
-    <main class="game-container">
-        <aside class="sidebar">
-            <h3>???????</h3>
-            <div class="component" draggable="true" id="arduino-uno">Arduino Uno</div>
-            <div class="component" draggable="true" id="led-red">Red LED</div>
-            <div class="component" draggable="true" id="resistor">Resistor</div>
-        </aside>
-        <section class="canvas-area" id="canvas">
-            <div class="instruction-overlay">????? ??????? ??? ???????</div>
-        </section>
-        <aside class="code-area">
-            <h3>???? ?????</h3>
-            <textarea id="code-editor" placeholder="????? ????? ???..."></textarea>
-            <button id="run-btn">???? ?? ????</button>
-            <div id="feedback"></div>
-        </aside>
-    </main>
+    <div class="wrapper">
+        <div class="col-side">
+            <div class="drag-item" draggable="true" ondragstart="drag(event)" data-node="arduino">Arduino Uno</div>
+            <div class="drag-item" draggable="true" ondragstart="drag(event)" data-node="led">Red LED</div>
+            <div class="drag-item" draggable="true" ondragstart="drag(event)" data-node="sensor">Sensor</div>
+            <hr>
+            <div id="task-info">
+                <h3>المهمة 1</h3>
+                <p>وصل الحساس بالمنفذ A0</p>
+            </div>
+            <button id="check-btn">تحقق من التوصيل</button>
+        </div>
+        <div class="col-main">
+            <div id="drawflow"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
